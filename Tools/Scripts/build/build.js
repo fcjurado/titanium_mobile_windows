@@ -61,7 +61,7 @@ async.series([
 			copyDir(path.join(rootDir, 'cli'), path.join(distRoot, 'cli'))
 		];
 
-		var include_TitaniumWindows = ['UI', 'Filesystem', 'Global', 'Filesystem', 'Map', 'Media', 'Network', 'Sensors', 'Ti'];
+		var include_TitaniumWindows = ['Filesystem', 'Global', 'Map', 'Media', 'Network', 'Sensors', 'Ti', 'UI'];
 		for (var i = 0; i < include_TitaniumWindows.length; i++) {
 			tasks.push(copyDir(path.join(rootDir, 'Source', include_TitaniumWindows[i], 'include', 'TitaniumWindows'), path.join(distLib, 'TitaniumWindows_' + include_TitaniumWindows[i], 'include', 'TitaniumWindows')));
 		}
